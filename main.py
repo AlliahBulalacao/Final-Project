@@ -7,7 +7,7 @@ answer = input("Play game? ('y' to continue) ")
 print(" ")
 while answer == "y":
 
-    vocabsynonyms = {  # dictionary/key pairs for definitions
+    vocabDictionary= {  # dictionary/key pairs for definitions
         "artificial": "natural", "arrive": "depart", "argue": "agree", "all": "none",
         "ge dan barai": "downward block", "age-uke": "rising block",
         "soto uke": "inward block", "uchi-uke": "outward block", "mae-geri-keage": "front snap kick",

@@ -1,13 +1,15 @@
-# Guess the antonym of the words
-# Must type in answer exactly as it appears in the Dictionary
-
 import random
+from itertools import repeat
+
+num_repeat = 10
 
 answer = input("Play game? ('Y' to continue) ")
-print(" ")
-while answer == "Y":
 
-    vocab_antonyms = { "artificial": "natural", "arrive": "depart", "argue": "agree", "all": "none",
+
+while True:
+    if answer == "Y":
+
+        vocab_antonyms = { "artificial": "natural", "arrive": "depart", "argue": "agree", "all": "none",
         "amateur": "professional", "alive": "dead","advanced": "elementary",
         "adult": "child", "ancestor": "descendant","boy": "girl",
         "build": "destroy", "borrow": "lend", "body": "soul", "blunt": "sharp",
@@ -22,24 +24,34 @@ while answer == "Y":
         "guilty": "innocent", "external": "internal", "expand": "compress",
         "brighten": "fade", "happy": "sad", "melt": "freeze"}
 
+    items = int(input('How many items would you like to answer? '))
+
     dict_list = list(vocab_antonyms.keys())
 
     random.shuffle(dict_list)
     correct = 0
     wrong = 0
-    for keys in dict_list:
-        display = {}
 
-        print(display.format(keys))
-        ans = input("Answer for Antonyms: ")
-        print(vocab_antonyms[keys])
+    for keyword in dict_list:
+        for i in range(0, items):
+            display = "{}"
 
-        if ans == vocab_antonyms[keys]:
-            print("Your answer is correct")
-            correct += 1
+            print(display.format(keyword))
+            ans = input("Answer for Antonyms: ")
+            print(vocab_antonyms[keyword])
 
-        else:
-            print("Your answer is wrong")
-            wrong += 1
+            if ans == vocab_antonyms[keyword]:
+                print("Your answer is correct\n")
+                correct += 1
 
-    score = "SCORE: {} are correct and {} are wrong"
+            else:
+                print("Your answer is wrong\n")
+                wrong += 1
+        break
+    repeat = input('Would you like to continue? ')
+    if repeat == 'Y':
+        continue
+    elif repeat == 'N':
+        break
+    break
+
