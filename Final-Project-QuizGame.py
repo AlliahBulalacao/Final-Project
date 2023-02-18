@@ -8,47 +8,22 @@ print(" ")
 while answer == "Y":
 
     vocab_antonyms = { "artificial": "natural", "arrive": "depart", "argue": "agree", "all": "none",
-        "amateur": "professional", "age-uke": "rising block",
-        "soto uke": "inward block", "uchi-uke": "outward block", "mae-geri-keage": "front snap kick",
-        "mae-geri": "front kick", "mawashi-geri": "roundhouse kick", "ushiro-geri": "back kick",
-        "yoko kekomi geri": "side thrust kick", "yoko-geri-keagi": "side snap kick",
-        "zenkutsu-dachi": "front stance", "kokutsu-dachi": "back stance", "kiba-dachi": "horse stance",
-        "neko-ashi-dachi": "cat stance",
-        "ken-tsui": "hammer fist", "nukite": "spear hand", "oi zuki": "step forward front punch", "shuto": "knife hand",
-        "haito": "ridge hand strike", "choku-zuki": "front punch",
-        "gyaku-zuki": "reverse punch", "kamae": "sparring stance", "shin": "mind",
-        "ki": "spirit", "waza": "technique", "empi-uchi": "elbow strike",
-        "mikazuki-geri": "crescent kick", "juji-uke": "x block", "kizami-zuki":
-            "jab", "morote-uke": "assisted block", "tate uraken uchi": "back fist"
-    }
+        "amateur": "professional", "alive": "dead","advanced": "elementary",
+        "adult": "child", "ancestor": "descendant","boy": "girl",
+        "build": "destroy", "borrow": "lend", "body": "soul", "blunt": "sharp",
+        "boring": "exciting", "cold": "hot", "careful": "careless",
+        "dainty": "clumsy", "callous": "sensitive", "desperate": "hopeful",
+        "exit": "entrance", "forbid": "allow", "future": "past", "gentle": "violent",
+        "gaiety": "misery", "giant": "tiny", "evening": "morning",
+        "exclude": "include", "hopeful": "desperate", "harvest": "plant",
+        "intelligent": "silly", "interrupt": "continue", "insult": "compliment",
+        "loser": "winner", "negative": "affirmative", "narrow": "broad",
+        "humble": "proud", "important": "trivial", "permanent": "temporary",
+        "guilty": "innocent", "external": "internal", "expand": "compress",
+        "brighten": "fade", "happy": "sad", "melt": "freeze"}
 
-    keyword_list = list(vocabDictionary.keys())  # turns words into a list
+    dict_list = list(vocab_antonyms.keys())
 
-    random.shuffle(keyword_list)  # shuffle keywords
-    correct = 0
-    wrong = 0
-    for keyword in keyword_list:
-        display = "{}"
-
-        print(display.format(keyword))
-        userInputAnswer = input("ANSWER: ")
-        print(vocabDictionary[keyword])
-        print(" ")
-
-        if userInputAnswer == (vocabDictionary[keyword]):
-            print("CORRECT")
-            correct += 1
-        else:
-            print("WRONG")
-            wrong += 1
-        print('_' * 25)  # line separator
-
-    # final score
-    displayScore = "SCORE: {} correct and {} wrong"
-    print(displayScore.format(correct, wrong))
-    answer = input("Play again? ('y' to continue) ")
-print(" ")
-print("Thanks for playing")
-
+    random.shuffle(dict_list)
 
 
