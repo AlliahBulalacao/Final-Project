@@ -31,4 +31,15 @@ while answer == "Y":
         display = {}
 
         print(display.format(keys))
-        ans =
+        ans = input("Answer for Antonyms: ")
+        print(vocab_antonyms[keys])
+
+        if ans == vocab_antonyms[keys]:
+            print("Your answer is correct")
+            correct += 1
+
+        else:
+            print("Your answer is wrong")
+            wrong += 1
+
+    score = "SCORE: {} are correct and {} are wrong"
