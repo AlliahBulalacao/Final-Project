@@ -25,5 +25,10 @@ while answer == "Y":
     dict_list = list(vocab_antonyms.keys())
 
     random.shuffle(dict_list)
+    correct = 0
+    wrong = 0
+    for keys in dict_list:
+        display = {}
 
-
+        print(display.format(keys))
+        ans =
